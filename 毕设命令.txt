@@ -1,0 +1,8 @@
+/usr/bin/fdfs_trackerd /etc/fdfs/tracker.conf restart
+/usr/bin/fdfs_storaged /etc/fdfs/storage.conf restart
+/usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx-fdfs.conf
+.\logstash.bat -f ..\config\mysql.conf
+.\logstash.bat -f ..\config\mysql_course_media.conf
+mkdir /var/run/nginx
+touch /var/run/nginx/nginx.pid
+5edca420740bda227c8b1b3a
